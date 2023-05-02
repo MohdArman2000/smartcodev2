@@ -51,13 +51,14 @@
     <!-- Start VWO Async SmartCode -->
     <script type="text/javascript">
      /* eslint-disable no-undef */
-window._vwo_code =
+	 window._vwo_code =
   window._vwo_code ||
   (function () {
-    var account_id = 4000206, // replace 1 with ${accountId} in release string
+    var account_id = 4000206,
       version = 2.0,
       settings_tolerance = 2000,
       use_existing_jquery = false,
+      library_tolerance = 2500,
       hide_element = "body",
       hide_element_style = "opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important",
       /* DO NOT EDIT BELOW THIS LINE */
@@ -76,6 +77,9 @@ window._vwo_code =
       code = {
         settings_tolerance: function () {
           return cc && cc.sT || settings_tolerance;
+        },
+        library_tolerance: function () {
+          return library_tolerance;
         },
         use_existing_jquery: function() {
           return use_existing_jquery;
@@ -171,8 +175,8 @@ window._vwo_code =
       };
     window._vwo_settings_timer = code.init();
     return code;
-  })(); 
-	</script>
+  })();
+	 </script>
 <!-- End VWO Async SmartCode -->
 
   </head>
