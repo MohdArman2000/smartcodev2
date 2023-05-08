@@ -181,6 +181,19 @@
 
   </head>
   <body>
+	<p id="p2"><strong>SPA BUTTON</strong></p>
+    <p>
+      <a
+        href="javascript:void(0)"
+        id="historyPush"
+        onclick="history.pushState(null, 'test', 'spa/1.html')"
+        >SPA URL</a
+      >
+    </p>
+    <a href="javascript:void(0)" onclick="location.hash='spa/1.html'"
+      >Change hash</a
+    >
+    <p></p>  
     <h1 style="text-align: center">Registration Form</h1>
     <div class="div1">
       <h2 id="WelMsg">Welcome to the website, Registration Starts Here...</h2>
@@ -294,19 +307,7 @@
       </form>
     </div>
     <br />
-    <p id="p2"><strong>SPA BUTTON</strong></p>
-    <p>
-      <a
-        href="javascript:void(0)"
-        id="historyPush"
-        onclick="history.pushState(null, 'test', 'spa/1.html')"
-        >SPA URL</a
-      >
-    </p>
-    <a href="javascript:void(0)" onclick="location.hash='spa/1.html'"
-      >Change hash</a
-    >
-    <p></p>
+    
     <button id="clickonlinkDummy">ClickElement</button>
     <button id="testelement2">ClickElement2</button>
     <button id="testelement3">ClickElement3</button>
