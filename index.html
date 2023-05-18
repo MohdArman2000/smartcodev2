@@ -183,14 +183,7 @@ f=false,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_setting
     </div>
     <br />
     <p id="p2"><strong>SPA BUTTON</strong></p>
-    <p>
-      <a
-        href="javascript:void(0)"
-        id="historyPush"
-        onclick="history.pushState(null, 'test', 'spa/1.html')"
-        >SPA URL</a
-      >
-    </p>
+    <button onclick="historyPushUrl()">SPA URL</button>
     <a href="javascript:void(0)" onclick="location.hash='spa/1.html'"
       >Change hash</a
     >
@@ -232,6 +225,18 @@ f=false,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_setting
         }
       </script>
     </p>
+	<script>
+        let spaCount = 1;
+
+        function historyPushUrl() {
+            const url = new URL(window.location);
+            url.searchParams.set('spa', spaCount);
+            window.history.pushState({}, '', url);
+            spaCount++;
+        }
+
+        setTimeout(historyPushUrl, 1000);
+    </script>
   </body>
 
 </html>
